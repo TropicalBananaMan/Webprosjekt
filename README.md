@@ -1,2 +1,0 @@
-# Webprosjekt
-Gruppe 9
