@@ -1,3 +1,7 @@
 Her er litt tekst.
 Her er litt mer tekst.
+<<<<<<< HEAD
 Her er det mye rart.
+=======
+Min tekst!!
+>>>>>>> a56cf6e03e37d923f9b9cd124f10b02d324b350f
