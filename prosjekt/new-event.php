@@ -1,5 +1,6 @@
-<?php require 'navbar-top.php'
-?>
+
+<link rel="stylesheet" href="css/navbar_top.css">
+<?php require 'navbar-top.php'?>
 
 <main>
 	<div>
