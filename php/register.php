@@ -40,7 +40,7 @@ if (isset($_POST['username'])&& isset($_POST['password'])&& isset($_POST['passwo
     }
     //Hvis alt ikke er fylt inn
     } else {
-        echo 'Alle felter må fylles inn.';
+        echo 'Alle feltene må fylles inn.';
     }
     
     
@@ -48,16 +48,40 @@ if (isset($_POST['username'])&& isset($_POST['password'])&& isset($_POST['passwo
 
 ?>
 
-<form action="register.php" method="POST">
-Brukernavn:<br> <input type="text" name="username" value="<?php if (isset($username)) { echo $username; } ?>"><br><br>
-Passord:<br> <input type="password" name="password"><br><br>
-Gjenta passord:<br> <input type="password" name="password_again"><br><br>
-Fornavn:<br> <input type="text" name="firstname" value="<?php if (isset($firstname)) { echo $firstname; } ?>"><br><br>
-Etternavn:<br> <input type="text" name="surname" value="<?php if(isset($surname)) { echo $surname; } ?>"><br><br>
-<input type="submit" value="Registrer">
+<html>
 
+<!-- Registreringsformen -->    
+
+<link rel="stylesheet" type="text/css" href="login_register.css">
+
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+
+<form action="register.php" method="POST">
+  <div class="container"> 
+      
+<label><p>Brukernavn</p></label>
+<input type="text" name="username" value="<?php if (isset($username)) { echo $username; } ?>"><br><br>
+      
+<label><p>Passord</p></label>
+<input type="password" name="password"><br><br>
+
+<label><p>Gjenta passord</p></label>
+<input type="password" name="password_again"><br><br>
+
+<label><p>Fornavn</p></label>
+<input type="text" name="firstname" value="<?php if (isset($firstname)) { echo $firstname; } ?>"><br><br>
+
+<label><p>Etternavn</p></label>
+<input type="text" name="surname" value="<?php if(isset($surname)) { echo $surname; } ?>"><br><br>
+<button type="submit">Registrer</button>
+      
+<a href="login_register.php">Gå tilbake</a>
+  </div>
 
 </form>
+    
+</html>
+
 
 <?php
 /*else if (loggedin()) {

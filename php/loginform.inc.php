@@ -1,5 +1,6 @@
 <?php
 
+
 //Inkludert fra index hvis bruker ikke er logget in
 
 //Brukernavn- og passord-sjekk
@@ -20,7 +21,7 @@ if(isset($_POST['username'])&&isset($_POST['password'])) {
         $query_num_rows = mysql_num_rows($query_run);
         //Hvis rader funnet er null
         if ($query_num_rows==0) {
-            echo 'Invalid username/password combination.';
+            echo 'Ugyldig brukernavn/passord kombinasjon.';
         //Hvis det finnes en rad fra spørringen
         //Finner frem id fra session
         //Sender bruker til index
@@ -32,14 +33,32 @@ if(isset($_POST['username'])&&isset($_POST['password'])) {
     }
     //Hvis bruker ikke har fyllt in feltene
     } else {
-        echo 'You must supply username and password';
+        echo 'Du må oppgi brukernavn og passord';
     }
 }
 
 ?>
 
+<html>
+
+<!-- Logg inn formen -->
+
+<link rel="stylesheet" type="text/css" href="login_register.css">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    
 <form action="<?php echo $current_file; ?>" method="POST">
-Brukernavn: <input type="text" name="username"> 
-Passord: <input type="password" name="password"> 
-<input type="submit" value="Log in">
+
+  <div class="container">
+    <label><p>Brukernavn</p></label>
+    <input type="text" name="username">
+
+    <label><p>Passord</p></label>
+    <input type="password" name="password">
+
+    <button type="submit">Logg inn</button>
+    
+    <a href="register.php">Registrer deg her</a>
+  </div>
 </form>
+    
+</html>
