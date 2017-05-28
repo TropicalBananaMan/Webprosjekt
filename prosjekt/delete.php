@@ -11,5 +11,5 @@ $event = Event::find($_GET['id']);
 $event->delete();
 
 // Vi redirecter tilbake til forsiden.
-header('Location: http://localhost/event-manager-pro-1/index.php');
+header('Location: http://localhost/prosjekt/index.php');
 die();

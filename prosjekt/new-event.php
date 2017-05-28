@@ -1,4 +1,5 @@
-<?php require 'navbar-top.php' ?>
+<?php require 'navbar-top.php'
+?>
 
 <main>
 	<div>
@@ -24,7 +25,7 @@
 			    <label for="sample1">Bilde-URL</label>
 		  	</div>
 				<div>
-						<input type="text" id="kategori" name="kategori">
+						<input type="text" id="category" name="category">
 						<label for="sample1">Kategori</label>
 					</div>
 		  	<label for="is-free">
