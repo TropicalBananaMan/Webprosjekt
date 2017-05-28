@@ -1,0 +1,40 @@
+#lag-ny-event{
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+#lag-ny-event img{
+  opacity: 0.6;
+  width: 64px;
+  height: auto;
+  -webkit-transition: opacity 0.3s
+}
+
+#lag-ny-event img:hover{
+  opacity: 1;
+}
+
+#event-container{
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.event{
+  background-color: #f0f0f0;
+  margin: 4px;
+  width: 280px;
+  height: 325px;
+}
+
+.event img{
+  width: 300px;
+  height: auto;
+}
