@@ -15,10 +15,10 @@ $database = new Database();
 $database->addConnection([
     'driver' => 'mysql',
     'port' => 3306,
-    'host' => '127.0.0.1',
-    'username' => 'root',
-    'password' => '',
-    'database' => 'westerdals_kork',
+    'host' => 'tek.westerdals.no',
+    'username' => 'borjon16_jonas',
+    'password' => 'megamann123!',
+    'database' => 'borjon16_westerdals_kork',
     'collation' => 'utf8_general_ci',
 ]);
 
