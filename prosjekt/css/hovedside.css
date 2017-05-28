@@ -30,8 +30,8 @@
 .event{
   background-color: #f0f0f0;
   margin: 4px;
-  width: 280px;
-  height: 325px;
+  width: 300px;
+  height: auto;
 }
 
 .event img{

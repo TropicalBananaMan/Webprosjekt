@@ -30,8 +30,18 @@ $categories = Category::all();
 
 <!doctype html>
 <html>
-    <head></head>
+    <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" type="text/css" href="css/reset.css">
+      <link rel="stylesheet" type="text/css" href="css/hovedside.css">
+      <link rel="stylesheet" type="text/css" href="css/navbar_top.css">
+      <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+      <title>Westerdals Kork</title>
+    </head>
     <body>
+      <!--Importer navbar-top her. -->
+      <?php require 'navbar-top.php' ?>
+
         <!-- Vi legger inn overskrift. Navn på kategori om det er satt, hvis ikke 'Alle eventer'. -->
         <h1><?= isset($chosenCategory) ? $chosenCategory->name : 'Alle eventer' ?></h1>
 
@@ -47,9 +57,10 @@ $categories = Category::all();
         </form>
 
         <!-- Vi legger til en liste med events fra $events arrayen vår. -->
-        <ul>
+        <div id="event-container">
             <?php foreach ($events as $event) { ?>
-            <li>
+
+              <div class="event">
                 <img src="<?= $event->image_path ?>" width="300">
                 <h2><?= $event->title ?></h2>
                 <p><?= $event->description ?></p>
@@ -59,8 +70,12 @@ $categories = Category::all();
 
                 <!-- Vi linker til delete.php og sender med event ID som GET parameter i URL'en. -->
                 <a href="delete.php?id=<?= $event->id ?>">Slett</a>
-            </li>
+              </div>
+
             <?php } ?>
-        </ul>
+        </div>
+
+        <!--Lag ny event. -->
+        <a id="lag-ny-event" href="new-event.php"><img src="images/plus_icon.png" alt=""></a>
     </body>
 </html>
